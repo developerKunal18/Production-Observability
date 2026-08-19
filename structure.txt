@@ -1,0 +1,15 @@
+observability/
+├── .gitignore
+├── README.md
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── app.py
+├── prometheus/
+│   └── prometheus.yml
+└── k8s/
+    ├── namespace.yaml
+    ├── deployment.yaml
+    ├── service.yaml
+    ├── servicemonitor.yaml
+    └── kustomization.yaml
