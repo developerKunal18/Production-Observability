@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    ports:
+      - "5000:5000"
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - api
