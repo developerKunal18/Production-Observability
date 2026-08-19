@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: day304-api
+  namespace: day304
+spec:
+  selector:
+    matchLabels:
+      app: day304-api
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
